@@ -5,6 +5,9 @@ const addFormDataController = require('../controllers/FormData.controller')
 
 
 // All routes
-router.route("/").post(addFormDataController.addFormData);
+router
+  .route("/")
+  .get(getFormDataController.getFormData)
+  .post(addFormDataController.addFormData);
 
 module.exports = router;
